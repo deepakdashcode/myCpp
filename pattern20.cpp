@@ -15,13 +15,13 @@ int main()
         int sp = 1;
         while (sp <= spaces)
         {
-            cout << " ";
+            cout << "  ";
             sp += 1;
         }
         int j = 1;
         while (j <= i)
         {
-            cout << "*";
+            cout << "* ";
             j++;
         }
         cout << "\n";

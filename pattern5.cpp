@@ -11,8 +11,8 @@ while (i <= n)
     while (j <= n)
     {
         cout << t << "\t";
-        j++;
-        t ++;
+        j++; // 
+        t++;
     }
     cout << "\n";
     i ++;
