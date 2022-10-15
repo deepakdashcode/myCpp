@@ -9,10 +9,6 @@ int main()
     cout << "Value is " << *((int*)(ptr)) << endl;
 
 
-    cout << (-10 % 4)  << endl; // -2
-    cout << (10 % -4)  << endl; //  2
-    cout << (10 % 4)   << endl; //  2
-    cout << (-10 % -4) << endl; // -2 
 
 
 return 0;
