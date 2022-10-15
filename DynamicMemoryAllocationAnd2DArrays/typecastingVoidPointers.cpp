@@ -6,6 +6,7 @@ int main()
     void *ptr = &i;
 
     cout << "Value is " << *(static_cast<int*>(ptr)) << endl;
+    cout << "Value is " << *((int*)(ptr)) << endl;
 
 return 0;
 }
