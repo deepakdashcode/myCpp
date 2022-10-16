@@ -5,12 +5,12 @@ int score = 100;
 
 void printScore()
 {
-    cout << score << endl;
+    cout << "Inside printScore : " << score << endl;
 }
 int main()
 {
     printScore();
-    cout << score << endl;
+    cout << "Inside main : " << score << endl;
 
 return 0;
 }
