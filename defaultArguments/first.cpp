@@ -9,7 +9,7 @@ using namespace std;
 
 */
 
-void printArray(int arr[], int size, int start = 0)
+void printArray(int arr[], int size = 0, int start = 0)
 {
     if(start > (size - 1))
         return;
