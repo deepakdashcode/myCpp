@@ -1,8 +1,18 @@
 #include<iostream>
 using namespace std;
 
+void print(int arr[], int size)
+{
+    for(int i = 0; i < size; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << "\n";
+}
+
 bool isPresent(int *arr, int size, int key)
 {
+    print(arr, size);
     if(size == 0)
         return false;
     if(arr[0] == key)
@@ -16,10 +26,8 @@ int main()
     // Testing
 
     int arr[] = {1, 4, 7, 5, 6, 17};
-    for(int i = 0; i <= 20; i++)
-    {
-        cout << i << "is Present : " << isPresent(arr, 6, i) << endl;
-    }
+    cout << isPresent(arr, 6, 5) << endl;
+
 
 return 0;
 }
