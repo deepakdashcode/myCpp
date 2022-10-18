@@ -12,6 +12,7 @@ void print(int arr[], int size)
 
 bool isPresent(int *arr, int size, int key)
 {
+    cout << "Size of arr : " << size << "\n";
     print(arr, size);
     if(size == 0)
         return false;
@@ -26,7 +27,7 @@ int main()
     // Testing
 
     int arr[] = {1, 4, 7, 5, 6, 17};
-    cout << isPresent(arr, 6, 5) << endl;
+    cout << isPresent(arr, 6, 17) << endl;
 
 
 return 0;
