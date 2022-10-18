@@ -17,6 +17,6 @@ long long int climbStairs(int n)
 }
 int main()
 {
-    cout << climbStairs(51) << endl;
+    cout << climbStairs(10) << endl;
 return 0;
 }
