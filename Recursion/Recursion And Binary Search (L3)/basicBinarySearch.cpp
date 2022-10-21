@@ -29,7 +29,7 @@ void print(int *arr, int start, int end)
 
 int ind(int *arr, int l, int r, int key)
 {
-    print(arr, l, r);
+    //print(arr, l, r);
     if(l > r)
         return -1;
     
