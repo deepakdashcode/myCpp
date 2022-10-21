@@ -8,7 +8,6 @@ int main()
     cout << "Enter a : "; cin >> a;
     cout << "Enter b : "; cin >> b;
     cout << "Enter op : "; cin >> op;
-
     switch(op)
     {
         case '+': cout << a + b << endl;
