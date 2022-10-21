@@ -6,6 +6,7 @@ pair<int, int> peakIndex(int *arr, int left, int right)
     int mid = left + (right - left) / 2;
     cout << "mid : " << mid << endl; 
     // Checking if mid is the peak Index
+    
     if(arr[mid] > arr[mid + 1] && arr[mid] > arr[mid - 1])
     {
         pair<int, int> ans;
