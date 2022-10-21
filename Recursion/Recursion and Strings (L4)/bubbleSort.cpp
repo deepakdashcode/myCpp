@@ -1,4 +1,6 @@
 #include<iostream>
+#include "printArr.cpp"
+
 using namespace std;
 
 void sort(int *arr, int size)
@@ -13,14 +15,6 @@ void sort(int *arr, int size)
     }
 }
 
-void print(int *arr, int size)
-{
-    for(int i = 0; i < size; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << "\n";
-}
 
 void sortRec(int *arr, int size, int swaps = 1)
 {
