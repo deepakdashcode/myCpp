@@ -50,7 +50,6 @@ int main()
         a[i - 1] = i;
     }
 
-
     sortRec(a, 100000);
 
     for(int i = 0; i < 100000; i ++)
