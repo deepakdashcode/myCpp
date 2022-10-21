@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void sort(int *arr, int start, int size)
+void sort(int *arr, int size, int start = 0)
 {
     if(start == size || size == 0|| size == 1)
     {
@@ -24,7 +24,7 @@ void sort(int *arr, int start, int size)
 int main()
 {
     int arr[] = {1, 3, 7, 2, 4, 3, 9, 0};
-    sort(arr, 0, 8);
+    sort(arr, 8);
 
     print(arr, 8);
 
