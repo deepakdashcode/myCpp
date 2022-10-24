@@ -43,8 +43,8 @@ void sort(int *arr, int low, int high)
 }
 int main()
 {
-    int arr[] = {1, 7, 8, 9, 3, 8, 2, 1, 0, 4, 1};
-    int n = 11;
+    int arr[] = {5, 4, 3, 0, 2, 8, 1, 7, 9, 3};
+    int n = 10;
     sort(arr, 0, n - 1);
     print(arr, 0, n - 1);
 
