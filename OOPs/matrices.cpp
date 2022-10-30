@@ -153,9 +153,9 @@ int main()
     matrix c = A * 5;
     c.print();
 
-    vector<vector<int>> m1{ { 1, 2 }, 
-                         { 4, 5}, 
-                         { 7, 8} };
+    vector<vector<int>> m1{ { 1, 2}, 
+                            { 4, 5}, 
+                            { 7, 8}};
     
     vector<vector<int>> m2{
         {2, 3},
