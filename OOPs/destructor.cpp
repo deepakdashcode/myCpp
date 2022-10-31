@@ -47,21 +47,21 @@ class hero
         cout << "Health : " << this -> health << "\n\n";
     }
 
+    ~hero()
+    {
+        
+    }
+
 };
 
 int main()
 {
     char name[4] = "Raj";
-    hero h(name, 'A', 100);
+    hero a(name, 'A', 100);
+    cout << "Working\n";
 
 
-    h.print();
-    hero b = h;
-    b.print();
-
-    h.name[0] = 'T';
-
-    h.print();
-    b.print();   
+    
+    
 return 0;
 }
