@@ -16,6 +16,7 @@ class hero
 
     hero(hero &obj)
     {
+        cout << "Copy constructor called\n";
         this -> health = obj.health;
         this -> level = obj.level;
     }
@@ -40,9 +41,7 @@ int main()
 
     a.print();
     b.print();
-
     
-
-    
+            
 return 0;
 }
