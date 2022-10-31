@@ -65,6 +65,5 @@ int main()
     h2.print();
 
     // Printed both
-
 return 0;
 }
