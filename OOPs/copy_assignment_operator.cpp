@@ -51,20 +51,16 @@ class hero
 int main()
 {
     char name[4] = "Raj";
-    hero h1(name, 'A', 100);
+    hero h(name, 'A', 100);
 
-    h1.print();
+    hero b = h;
 
-    hero h2(h1);
-    h2.print();
+    h.print();
+    b.print();
 
-    // Changed h1
-    h1.name[0] = 'T';
-    h1.level = 'B';
+    h.name[0] = 'T';
 
-    // Now print Both
-    h1.print();
-    h2.print();
-    // End of code
+    h.print();
+    b.print();   
 return 0;
 }
