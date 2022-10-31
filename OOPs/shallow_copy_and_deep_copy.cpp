@@ -64,5 +64,6 @@ int main()
     h1.print();
     h2.print();
 
+    // Printed both
 return 0;
 }
