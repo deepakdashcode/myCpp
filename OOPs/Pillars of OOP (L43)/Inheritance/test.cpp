@@ -30,6 +30,8 @@ int main()
 {
     boy a;
     a.print();
+    // male ab ;
+    // cout << ab.age; // Error ! Inaccessible from here
     
 return 0;
 }
