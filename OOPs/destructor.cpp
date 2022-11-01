@@ -47,10 +47,7 @@ class hero
         cout << "Health : " << this -> health << "\n\n";
     }
 
-    ~hero()
-    {
-        
-    }
+
 
 };
 
