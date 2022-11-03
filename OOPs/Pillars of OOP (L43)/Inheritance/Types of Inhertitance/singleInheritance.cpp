@@ -22,5 +22,7 @@ int main()
 {
     dog a;
     a.speak();
+
+    cout << a.age << endl;
 return 0;
 } 
