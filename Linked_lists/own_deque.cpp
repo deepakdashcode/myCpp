@@ -80,6 +80,33 @@ public:
 
         cout << "\n";
     }
+
+    void insert(int data, int index)
+    {
+        Node *start = this->head;
+        if (index == 0)
+        {
+            push_front(data);
+            return;
+        }
+        for (int i = 1; i < index; i++)
+        {
+            start = start->next;
+        }
+
+        if (start->next == NULL)
+        {
+            push_back(data);
+            return;
+        }
+        Node *temp = new Node(data);
+
+        temp->previous = start;
+        temp->next = start->next;
+
+        start->next->previous = temp;
+        start->next = temp;
+    }
 };
 
 int main()
@@ -99,11 +126,16 @@ int main()
     d.pop_back();
     d.print();
 
-    d.pop_front();
-    d.print();
+    // d.pop_front();
+    // d.print();
 
-    d.pop_front();
-    d.print();
+    // d.pop_front();
+    // d.print();
 
+    // d.insert(20, 1);
+    // d.print();
+
+    d.insert(70, 3);
+    d.print();
     return 0;
 }
