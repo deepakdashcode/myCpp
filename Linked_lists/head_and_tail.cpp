@@ -41,6 +41,36 @@ public:
         tail->next = temp;
         tail = temp;
     }
+
+    void insert(int data, int index)
+    {
+
+        if (index == 0)
+        {
+
+            add_left(data);
+        }
+        else
+        {
+            Node *start = head;
+            for (int i = 1; i < index; i++)
+            {
+                start = start->next;
+            }
+
+            if (start->next == NULL)
+            {
+                // Inserting at last
+
+                add_right(data);
+                return;
+            }
+            Node *temp = new Node(data);
+
+            temp->next = start->next;
+            start->next = temp;
+        }
+    }
     void print()
     {
         Node *start = head;
@@ -61,17 +91,23 @@ int main()
 
     ll.print();
 
-    ll.add_left(20);
-
-    ll.print();
-
-    ll.add_left(50);
-
-    ll.print();
-
     ll.add_right(100);
 
     ll.print();
 
+    ll.insert(80, 2);
+
+    ll.print();
+
+    ll.insert(7, 0);
+
+    ll.print();
+
+    ll.insert(40, 4);
+
+    ll.print();
+
+    cout << ll.head->data << endl;
+    cout << ll.tail->data << endl;
     return 0;
 }
