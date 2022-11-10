@@ -1,3 +1,13 @@
+//    Properties of deque
+// 1. Adding an element to start ---> O(1)
+// 2. Adding an element to end --> O(1)
+// 3. Removing an element from start --> O(1)
+// 4. Removing an elemnt from end --> O(1)
+// 5. Accessing first element --> O(1)
+// 6. Accessing any random element --> O(n)
+// 7. Removing any random element --> O(n)
+// 8. Inserting an elemnt in any random index  --> O(n)
+
 #include <iostream>
 using namespace std;
 
