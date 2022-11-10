@@ -52,20 +52,62 @@ public:
         head = temp;
     }
 
-    void pop_back()
+    int pop_back()
     {
+        int value = this->tail->data;
         this->tail->previous->next = NULL;
         Node *temp = this->tail;
         this->tail = this->tail->previous;
         delete temp;
+        return value;
     }
 
-    void pop_front()
+    int pop_front()
     {
+        int value = this->head->data;
         Node *temp = this->head;
         head = head->next;
         head->previous = NULL;
         delete temp;
+        return value;
+    }
+
+    int pop(int index)
+    {
+        if (index == 0)
+        {
+            return pop_front();
+        }
+        else
+        {
+            Node *start = head;
+            for (int i = 1; i < index; i++)
+            {
+                start = start->next;
+            }
+
+            // To be continued
+
+            // Check if last node is to be deleted
+
+            if (start->next->next == NULL)
+            {
+                // Last node
+                return pop_back();
+            }
+
+            else
+            {
+                Node *temp = start->next;
+                int value = temp->data;
+
+                start->next = temp->next;
+                temp->next->previous = temp->previous;
+                delete temp;
+
+                return value;
+            }
+        }
     }
     void print()
     {
@@ -79,6 +121,23 @@ public:
         }
 
         cout << "\n";
+    }
+
+    void head_and_tail()
+    {
+        cout << "Head : " << head->data << endl;
+        cout << "Tail : " << tail->data << endl;
+    }
+
+    int getElement(int index)
+    {
+        Node *start = head;
+        for (int i = 0; i < index; i++)
+        {
+            start = start->next;
+        }
+
+        return start->data;
     }
 
     void insert(int data, int index)
@@ -126,16 +185,22 @@ int main()
     d.pop_back();
     d.print();
 
-    // d.pop_front();
-    // d.print();
+    d.pop_front();
+    d.print();
 
-    // d.pop_front();
-    // d.print();
-
-    // d.insert(20, 1);
-    // d.print();
+    d.insert(20, 1);
+    d.print();
 
     d.insert(70, 3);
     d.print();
+
+    d.head_and_tail();
+
+    cout << "Element deleted is : " << d.pop(4) << endl;
+
+    d.print();
+    d.head_and_tail();
+
+    cout << d.getElement(3) << endl;
     return 0;
 }
