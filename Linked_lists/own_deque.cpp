@@ -40,9 +40,21 @@ public:
         tail = temp;
     }
 
+    deque()
+    {
+        head = NULL;
+        tail = NULL;
+    }
     void push_back(int data)
     {
+
         Node *temp = new Node(data);
+        if (this->head == NULL)
+        {
+            this->head = temp;
+            this->tail = temp;
+            return;
+        }
 
         temp->previous = this->tail;
 
@@ -54,6 +66,13 @@ public:
     void push_front(int data)
     {
         Node *temp = new Node(data);
+
+        if (this->head == NULL)
+        {
+            this->head = temp;
+            this->tail = temp;
+            return;
+        }
 
         this->head->previous = temp;
 
@@ -180,37 +199,45 @@ public:
 
 int main()
 {
-    deque d(10);
-    d.print();
-    d.push_back(100);
-    d.print();
-    d.push_back(200);
-    d.print();
+    // deque d(10);
+    // d.print();
+    // d.push_back(100);
+    // d.print();
+    // d.push_back(200);
+    // d.print();
 
-    d.push_front(50);
-    d.print();
-    d.push_front(80);
-    d.print();
+    // d.push_front(50);
+    // d.print();
+    // d.push_front(80);
+    // d.print();
 
-    d.pop_back();
-    d.print();
+    // d.pop_back();
+    // d.print();
 
-    d.pop_front();
-    d.print();
+    // d.pop_front();
+    // d.print();
 
-    d.insert(20, 1);
-    d.print();
+    // d.insert(20, 1);
+    // d.print();
 
-    d.insert(70, 3);
-    d.print();
+    // d.insert(70, 3);
+    // d.print();
 
-    d.head_and_tail();
+    // d.head_and_tail();
 
-    cout << "Element deleted is : " << d.pop(4) << endl;
+    // cout << "Element deleted is : " << d.pop(4) << endl;
 
-    d.print();
-    d.head_and_tail();
+    // d.print();
+    // d.head_and_tail();
 
-    cout << d.getElement(3) << endl;
+    // cout << d.getElement(3) << endl;
+
+    // deque ls;
+    // ls.push_front(20);
+    // ls.print();
+    // ls.push_back(10);
+
+    // ls.print();
+    // ls.head_and_tail();
     return 0;
 }
