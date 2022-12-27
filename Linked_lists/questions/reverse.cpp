@@ -51,6 +51,24 @@ class ll
         
     }
 
+    node* rev(node* start)
+    {
+        if(!(start) || (!(start->next)))
+        {
+            return start;
+        }
+
+        node* newHead = rev(start -> next);
+        start->next->next = start;
+        start->next = NULL;
+        return newHead;
+    }
+
+    void recursiveRev()
+    {
+        this->head = rev(this->head);
+
+    }
     void reverse()
     {
         if(!(head) || (!(head->next)))
@@ -69,17 +87,22 @@ class ll
         head->next = prv;
     }
 
-    
+
 
 };
 int main()
 {
     ll ls;
     ls.add(10);
-    // ls.add(30);
-    // ls.add(50);
+    ls.add(30);
+    ls.add(50);
+    ls.add(80);
     ls.print();
     ls.reverse();
     ls.print();
+    ls.recursiveRev();
+    ls.print();
+
+
     return 0;
 }
